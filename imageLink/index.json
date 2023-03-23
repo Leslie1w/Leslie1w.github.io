@@ -1,0 +1,28 @@
+<div class="gallery-group-main"> 
+  <figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='https://bu.dusays.com/2022/11/26/638228a86935a.webp' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">ACG</div>
+  <p>那些二次元的故事</p>
+  <a href='/gallery/ACG'></a>
+  </figcaption>
+  </figure>
+   
+  <figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='https://bu.dusays.com/2022/11/27/63831b681e9f8.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">岳阳</div>
+  <p>2017年5月岳阳</p>
+  <a href='/gallery/YY'></a>
+  </figcaption>
+  </figure>
+   
+  <figure class="gallery-group">
+  <img class="gallery-group-img no-lightbox" src='https://i.loli.net/2019/12/25/hOqbQ3BIwa6KWpo.jpg' alt="Group Image Gallery">
+  <figcaption>
+  <div class="gallery-group-name">OH MY GIRL</div>
+  <p>关于OH MY GIRL的图片</p>
+  <a href='/Gallery/ohmygirl'></a>
+  </figcaption>
+  </figure>
+   </div>
