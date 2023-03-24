@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.loginBox {
+    display: flow-root;
+    position: relative;
+    left: 50%;
+    width: 400px;
+    height: 370px;
+    margin-top: 35px;
+    transform: translateX(-50%);
+    transition: all .4s;
+    transform-style: preserve-3d;
+}
+
+.container,
+.login {
+    position: absolute;
+    top: 0;
+    width: 400px;
+    background-color: rgba(0, 0, 0, .8);
+    text-align: center;
+    border-radius: 20px;
+}
+
+.container {
+    display: none;
+    transform: rotateY(180deg);
+}
+
+.title {
+    color: white;
+    font-size: 24px;
+    margin: 30px 0px;
+    user-select: none;
+}
+
+button {
+    text-align: center;
+}
+
+input {
+    width: 200px;
+    height: 26px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    border-bottom: 1px solid #fff;
+    background-color: transparent;
+    text-indent: 1em;
+}
+
+input::placeholder {
+    user-select: none;
+    color: white;
+    opacity: .5;
+}
+
+.btn {
+    margin: 10px 0px;
+}
+
+.loginBox .container div {
+    position: relative;
+}
+
+label {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 33%;
+    color: white;
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, .8);
+    padding: 0px 5px;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: translateY(-50%) scale(.7);
+}
+
+.login .err,
+.container .err {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(.7);
+    font-size: 12px;
+    color: white;
+    padding: 4px;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: 10px;
+    z-index: 1;
+}
+
+#results {
+    text-align: center;
+    color: white;
+    margin-top: 100px;
+    user-select: none;
+}
+
+.tog {
+    display: none;
+    position: absolute;
+    left: 170px;
+    top: -30px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(6, 88, 129);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+}
+
+.tog:hover {
+    color: skyblue;
+}

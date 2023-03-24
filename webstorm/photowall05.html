@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" ondragstart="return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="">
+    <meta name="Description" content="">
+    <title>青春校园</title>
+    <style type="text/css">
+        .images{
+            width: 1080px;
+            margin: 60px 60px 10px 40px;
+
+            position: absolute;
+
+
+        }
+
+        .pic{
+            width: 160px;
+        }
+
+        .images img:hover{
+            box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+            transform:rotate(0deg) scale(5.50);
+            -webkit-transform:rotate(0deg) scale(2.20);
+            z-index: 1000;
+        }
+
+        .images img{
+            padding: 10px 10px 15px;
+            background: white;
+            border: 1px solid #ddd;
+            box-shadow: 2px 2px 3px rgba(50,50,50,0.4);
+            -webkit-transition: all 0.5s ease-in;
+            -moz-transition: all 0.5s ease-in;
+            -ms-transition: all 0.5s ease-in;
+            -o-transition: all 0.5s ease-in;
+            transition: all 0.5s ease-in;
+            position: absolute;
+            z-index: 1;
+        }
+
+        .pic1{
+            left: 500px;
+            top: 100px;
+            transform:rotate(-5deg);
+            -webkit-transform:rotate(-10deg);
+        }
+
+        .pic2{
+            left: 200px;
+            top: 150px;
+            transform:rotate(-20deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .pic3{
+            top: 220px;
+            right: 80px;
+            transform:rotate(5deg);
+            -webkit-transform:rotate(5deg);
+        }
+
+        .pic4{
+            top: 10px;
+            left: 300px;
+            transform:rotate(-10deg);
+            -webkit-transform:rotate(-10deg);
+        }
+
+        .pic5{
+
+            top: 200px;
+            right: 200px;
+            transform:rotate(-10deg);
+            -webkit-transform:rotate(-10deg);
+        }
+        .pic6{
+            left: 50px;
+            top: 250px;
+            transform:rotate(10deg);
+            -webkit-transform:rotate(10deg);
+        }
+
+        .pic7{
+            left: 850px;
+            top: 0;
+            transform:rotate(20deg);
+            -webkit-transform:rotate(20deg);
+        }
+        .pic8{
+            bottom: -10px;
+            top: 400px;
+            left: 250px;
+            transform:rotate(5deg);
+            -webkit-transform:rotate(5deg);
+        }
+        .pic9{
+            left: 550px;
+            top: 350px;
+            transform:rotate(15deg);
+            -webkit-transform:rotate(15deg);
+        }
+        .pic11{
+            left: 10px;
+            top: 400px;
+            transform:rotate(15deg);
+            -webkit-transform:rotate(-15deg);
+        }
+        .pic12{
+            right: 10px;
+            top: 450px;
+            transform:rotate(15deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .pic13{
+            left: 10px;
+            top: 650px;
+            transform:rotate(15deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .pic14{
+            left: 200px;
+            top: 500px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-35deg);
+        }
+        .pic14{
+            left: 300px;
+            top: 680px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-35deg);
+        }
+        .pic15{
+            left: 550px;
+            top: 600px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(35deg);
+        }
+        .pic16{
+            left: 750px;
+            top: 600px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-35deg);
+        }
+        .pic17{
+            left: 450px;
+            top: 550px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-15deg);
+        }
+        .pic18{
+            left: 10px;
+            top: 880px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .pic19{
+            left: 700px;
+            top: 880px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-35deg);
+        }
+        .imgsh1{
+            left: 700px;
+            top: 880px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-35deg);
+        }
+        .imgsh2{
+            left: 500px;
+            top: 880px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-25deg);
+        }
+        .imgsh3{
+            left: 300px;
+            top: 880px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .imgsh4{
+            left: 500px;
+            top: 1080px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .imgsh5{
+            left: 800px;
+            top: 1080px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(35deg);
+        }
+        .imgsh6{
+            left: 80px;
+            top: 1080px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .imgsh7{
+            left: 300px;
+            top: 1200px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-45deg);
+        }
+        .imgsh8{
+            left: 500px;
+            top: 1200px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .imgsh9{
+            left: 800px;
+            top: 1200px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(35deg);
+        }
+        .imgsh10{
+            left: 400px;
+            top: 1400px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-15deg);
+        }
+        .imgsh11{
+            left: 80px;
+            top: 1400px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(15deg);
+        }
+        .imgsh12{
+            left: 200px;
+            top: 1400px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-25deg);
+        }
+        .imgsh13{
+            left: 600px;
+            top: 1400px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(15deg);
+        }
+        .imgsh14{
+            left: 800px;
+            top: 1400px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-15deg);
+        }
+        .imgsh15{
+            left: 500px;
+            top: 1600px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(15deg);
+        }
+        .imgsh16{
+            left: 80px;
+            top: 1600px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-25deg);
+        }
+        .imgsh17{
+            left: 300px;
+            top: 1600px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(15deg);
+        }
+        .imgsh18{
+            left: 800px;
+            top: 1600px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-25deg);
+        }
+        .imgsh19{
+            left: 500px;
+            top: 1800px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .imgsh20{
+            left: 50px;
+            top: 1800px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-25deg);
+        }
+        .imgsh21{
+            left: 250px;
+            top: 1800px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        .imgsh22{
+            left: 700px;
+            top: 1800px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(15deg);
+        }
+        .imgsh23{
+            left: 50px;
+            top: 2000px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(10deg);
+        }
+        .imgsh24{
+            left: 250px;
+            top: 2000px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-5deg);
+        }
+        .imgsh51{
+            left: 500px;
+            top: 2000px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(-15deg);
+        }
+        .imgsh55{
+            left: 800px;
+            top: 2000px;
+            transform:rotate(35deg);
+            -webkit-transform:rotate(25deg);
+        }
+        body {
+            background-color: #F5F5DC;
+        }
+    </style>
+</head>
+
+<body>
+<!-- 盒子容器 -->
+<div class="perspective">
+
+    <div class="wrap images" id="images">
+        <!-- 引入图片值页面 -->
+
+        <img class="pic pic1" src="img/31.jpg" />
+        <img class="pic pic2" src="img/33.jpg" />
+        <img class="pic pic3" src="img/35.jpg" />
+        <img class="pic pic4" src="img/36.jpg" />
+        <img class="pic pic5" src="img/37.jpg" />
+        <img class="pic pic6" src="img/38.jpg" />
+        <img class="pic pic7" src="img/50.jpg" />
+        <img class="pic pic8" src="img/51.jpg" />
+        <img class="pic pic9" src="img/52.jpg" />
+
+        <img class="pic pic11" src="img/53.jpg" />
+        <img class="pic pic12" src="img/54.jpg" />
+        <img class="pic pic13" src="img/73.jpg" />
+        <img class="pic pic14" src="img/74.jpg" />
+        <img class="pic pic15" src="img/78.jpg" />
+        <img class="pic pic16" src="img/85.jpg" />
+        <img class="pic pic17" src="img/86.jpg" />
+        <img class="pic pic18" src="img/87.jpg" />
+        <img class="pic pic19" src="img/88.jpg" />
+        <img class="pic pic21" src="img/89.jpg" />
+
+
+        <img src="sh/1.jpg" class="pic imgsh1">
+        <img src="sh/2.jpg" class="pic imgsh2">
+        <img src="sh/3.jpg" class="pic imgsh3">
+        <img src="sh/4.jpg" class="pic imgsh4">
+        <img src="sh/5.jpg" class="pic imgsh5">
+        <img src="sh/6.jpg" class="pic imgsh6">
+        <img src="sh/7.jpg" class="pic imgsh7">
+        <img src="sh/8.jpg" class="pic imgsh8">
+        <img src="sh/9.jpg" class="pic imgsh9">
+        <img src="sh/10.jpg" class="pic imgsh10">
+        <img src="sh/11.jpg" class="pic imgsh11">
+        <img src="sh/12.jpg" class="pic imgsh12">
+        <img src="sh/13.jpg" class="pic imgsh13">
+        <img src="sh/14.jpg" class="pic imgsh14">
+        <img src="sh/15.jpg" class="pic imgsh15">
+        <img src="sh/16.jpg" class="pic imgsh16">
+        <img src="sh/17.jpg" class="pic imgsh17">
+        <img src="sh/18.jpg" class="pic imgsh18">
+        <img src="sh/19.jpg" class="pic imgsh19">
+        <img src="sh/20.jpg" class="pic imgsh20">
+        <img src="sh/21.jpg" class="pic imgsh21">
+        <img src="sh/22.jpg" class="pic imgsh22">
+        <img src="sh/23.jpg" class="pic imgsh23">
+        <img src="sh/24.jpg" class="pic imgsh24">
+        <img src="sh/51.jpg" class="pic imgsh51">
+        <img src="sh/55.jpg" class="pic imgsh55">
+    </div>
+</div>
+<!-- <div class="page page4">
+         <div class="page4-box">
+             <div class="page4-text">
+                 <p>努力的人</p>
+             </div>
+         </div>
+     </div> -->
+<!--  src="JS/photo.js" -->
+</body>
+
+</html>

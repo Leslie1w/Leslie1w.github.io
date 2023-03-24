@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>艺术照展览</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+
+    <style type="text/css">
+        body {
+            background-color: MediumAquaMarine;
+            background-size: 100%;
+        }
+        img {
+            width: 350px;
+        }
+        #pic1 {
+            position: absolute;
+            top: 90px;
+            left: 10px;
+            transform: rotate(20deg);
+        }
+        #pic2 {
+            position: absolute;
+            top: 90px;
+            left: 300px;
+            transform: rotate(20deg);
+        }
+        #pic3 {
+            position: absolute;
+            top: 90px;
+            left: 650px;
+            transform: rotate(20deg);
+        }
+        #pic4 {
+            position: absolute;
+            top: 90px;
+            left: 900px;
+            transform: rotate(20deg);
+        }
+        #pic1:hover {
+            transform: rotate(0deg);
+            transform: scale(1.5);
+        }
+        #pic2:hover {
+            transform: rotate(0deg);
+            transform: scale(1.5);
+        }
+        #pic3:hover {
+            transform: rotate(0deg);
+            transform: scale(1.5);
+        }
+        #pic4:hover {
+            transform: rotate(0deg);
+            transform: scale(1.5);
+        }
+
+        /*在这里开始编写【设置图片样式】的代码*/
+    </style>
+</head>
+<style>
+
+    @import url('https://fonts.googleapis.com/css?family=Liu+Jian+Mao+Cao|Long+Cang|Ma+Shan+Zheng|ZCOOL+KuaiLe|ZCOOL+QingKe+HuangYou|ZCOOL+XiaoWei&display=swap&subset=chinese-simplified');
+
+    /* 设置背景样式 */
+    body {
+        background: no-repeat;
+        background-size: cover;
+    }
+    /* 设置标题样式 */
+    h1 {
+        height: 80px;
+        color:rgba(255, 248 , 220);
+        font-size: 60px;
+        font-family: 'Ma Shan Zheng';
+        text-align: center;
+    }
+    /* 设置 */
+    #part1 {
+        width: 70%;
+        margin: 0px 15%;
+        height:50px;
+        font-family: 'Ma Shan Zheng';
+        font-size: 36px;
+        text-align: center;
+
+        /* 添加字体颜色 */
+        color:rgba(255,248,220);
+        background-color: rgba(255,255,255,0.1);
+        border-color: rgba(255,255,255,0.4);
+        border-width: 3px;
+        border-style: solid;
+        border-radius: 35px;
+    }
+
+    div img {
+        box-shadow: 5px 5px 15px rgba(105,105,105,0.9);
+        border-width: 10px 12px ;
+        border-color: rgba(255,248,220, 0.9);
+        border-style: solid;
+        transition: all 0.5s ease-in;
+        z-index: 10;
+    }
+
+    div {
+        width: 1200px;
+        height: 500px;
+        margin: 80px auto;
+        /* align: center; */
+        position: relative;
+    }
+
+    img:hover{
+        z-index: 100;
+    }
+    .ribbon {
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 450px;
+        top: 35px;
+        margin: auto;
+    }
+
+
+
+    .ribbon a:link,
+    .ribbon a:visited {
+        color: #000;
+        text-decoration: none;
+        height: 3.5em;
+        overflow: hidden;
+    }
+
+    .ribbon span {
+        background: #E6E6FA;
+        display: inline-block;
+        line-height: 3em;
+        padding: 0 1.5em;
+        margin-top: 0.5em;
+        position: relative;
+        -webkit-transition: background-color 0.2s, margin-top 0.2s;
+        /* Saf3.2+, Chrome */
+        -moz-transition: background-color 0.2s, margin-top 0.2s;
+        /* FF4+ */
+        -ms-transition: background-color 0.2s, margin-top 0.2s;
+        /* IE10 */
+        -o-transition: background-color 0.2s, margin-top 0.2s;
+        /* Opera 10.5+ */
+        transition: background-color 0.2s, margin-top 0.2s;
+    }
+
+    .ribbon a:hover span {
+        background: #FFD204;
+        margin-top: 0;
+    }
+
+    .ribbon span:before {
+        content: "";
+        position: absolute;
+        top: 3em;
+        left: 0;
+        border-right: 0.5em solid #9B8651;
+        border-bottom: 0.5em solid #fff;
+    }
+
+    .ribbon span:after {
+        content: "";
+        position: absolute;
+        top: 3em;
+        right: 0;
+        border-left: 0.5em solid #9B8651;
+        border-bottom: 0.5em solid #fff;
+    }
+    .content {
+        position: absolute;
+        top: 900px;
+        left: 20px
+    }
+
+
+</style>
+
+<body>
+<h1>美照展览墙</h1>
+<p id="part1">一起来欣赏娇娇的美！</p>
+<div>
+    <!--在这里开始编写【添加 id 属性】的代码-->
+    <img  src="img/1.jpg" />
+    <img  src="img/34.jpg" />
+    <img  src="img/3.jpg" />
+    <img  src="img/22.jpg" />
+    <img  src="img/5.jpg" />
+    <img  src="img/67.jpg" />
+    <img  src="img/7.jpg" />
+    <img  src="img/49.jpg" />
+    <img  src="img/9.jpg" />
+    <img  src="img/65.jpg" />
+
+    <img  src="img/11.jpg" />
+    <img  src="img/27.jpg" />
+    <img  src="img/13.jpg" />
+    <img  src="img/4.jpg" />
+    <img  src="img/14.jpg" />
+    <img  src="img/39.jpg" />
+    <img  src="img/16.jpg" />
+    <img  src="img/64.jpg" />
+    <img  src="img/20.jpg" />
+    <img  src="img/70.jpg" />
+
+
+
+    <img  src="img/6.jpg" />
+    <img  src="img/24.jpg" />
+    <img  src="img/62.jpg" />
+    <img  src="img/26.jpg" />
+    <img  src="img/12.jpg" />
+    <img  src="img/28.jpg" />
+    <img  src="img/42.jpg" />
+    <img  src="img/2.jpg" />
+    <img  src="img/72.jpg" />
+    <img  src="img/17.jpg" />
+    <img  src="img/32.jpg" />
+
+
+    <img  src="img/71.jpg" />
+    <img  src="img/21.jpg" />
+    <img  src="img/40.jpg" />
+    <img  src="img/10.jpg" />
+    <img  src="img/66.jpg" />
+    <img  src="img/15.jpg" />
+    <img  src="img/41.jpg" />
+    <img  src="img/19.jpg" />
+    <img  src="img/48.jpg" />
+
+
+
+
+    <img  src="img/18.jpg" />
+    <img  src="img/68.jpg" />
+    <img  src="img/23.jpg" />
+    <img  src="img/69.jpg" />
+    <img  src="img/8.jpg" />
+
+    <img  src="img/63.jpg" />
+
+
+</div>
+<!--<div class="ribbon">
+    <a href='double.html'><span>Welcome</span></a>
+    <a href='home.html'><span>Home</span></a>
+</div>-->
+
+<!--
+<div class="content">
+    <hr/>
+    <p>站长注释:<br>部分功能仍在开发中，详情咨询QQ：3148420460</p>
+</div>
+-->
+
+</body>
+
+</html>

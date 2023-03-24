@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>甜蜜生活照</title>
+    <style>
+        body {
+            background-color: #F5F5DC;
+        }
+        .box  {
+            margin: auto;
+            width: 1000px;
+            height: 600px;
+            position: relative;
+        }
+        .box img {
+            border: 1px solid white;
+            padding: 10px;
+            width: 300px;
+            box-shadow: 1px 1px 5px #666;
+            border-radius: 10px;
+            transition: all 1s;
+        }
+        .box img:hover {
+            transform: scale(1.5,1.5);
+            z-index: 1;
+        }
+
+        .img1 {
+            position: absolute;
+            top: 90px;
+            left: 0px;
+            transform: rotate(5deg);
+        }
+        .img2 {
+            position: absolute;
+            top: 90px;
+            left: 350px;
+            transform: rotate(-5deg);
+        }
+        .img3 {
+            position: absolute;
+            top: 97px;
+            left: 700px;
+            transform: rotate(8deg);
+        }
+        .img4 {
+            position: absolute;
+            top: 500px;
+            left: 0px;
+            transform: rotate(-5deg);
+        }
+        .img37 {
+            position: absolute;
+            top: 180px;
+            left: 1050px;
+            transform: rotate(4deg);
+        }
+
+        .img5 {
+            position: absolute;
+            top: 500px;
+            left: 300px;
+            transform: rotate(-2deg);
+        }
+        .img6 {
+            position: absolute;
+            top: 500px;
+            left: 650px;
+            transform: rotate(-3deg);
+        }
+        .img51 {
+            position: absolute;
+            top: 700px;
+            left: 0px;
+            transform: rotate(15deg);
+        }
+        .img52 {
+            position: absolute;
+            top: 700px;
+            left: 300px;
+            transform: rotate(-5deg);
+        }
+        .img54 {
+            position: absolute;
+            top: 950px;
+            left: 680px;
+            transform: rotate(-10deg);
+        }
+        .img55 {
+            position: absolute;
+            top: 870px;
+            left: 980px;
+            transform: rotate(-5deg);
+        }
+        .img56 {
+            position: absolute;
+            top: 1080px;
+            left: 0px;
+            transform: rotate(12deg);
+        }
+        .img57 {
+            position: absolute;
+            top: 1080px;
+            left: 350px;
+            transform: rotate(-12deg);
+        }
+        .img58 {
+            position: absolute;
+            top: 1280px;
+            left: 1000px;
+            transform: rotate(-10deg);
+        }
+        .img59 {
+            position: absolute;
+            top: 1280px;
+            left: 680px;
+            transform: rotate(5deg);
+        }
+
+        .img61 {
+            position: absolute;
+            top: 1480px;
+            left: 0px;
+            transform: rotate(-5deg);
+        }
+        .img73 {
+            position: absolute;
+            top: 1480px;
+            left: 320px;
+            transform: rotate(5deg);
+        }
+        .img74 {
+            position: absolute;
+            top: 1680px;
+            left: 980px;
+            transform: rotate(-15deg);
+        }
+        .img75 {
+            position: absolute;
+            top: 1880px;
+            left: 700px;
+            transform: rotate(-5deg);
+        }
+        .img76 {
+            position: absolute;
+            top: 1880px;
+            left: 380px;
+            transform: rotate(-3deg);
+        }
+    .img78 {
+            position: absolute;
+            top: 1880px;
+            left: 0px;
+            transform: rotate(20deg);
+        }
+        .img79 {
+            position: absolute;
+            top: 2300px;
+            left: 0px;
+            transform: rotate(30deg);
+        }
+        .img80 {
+            position: absolute;
+            top: 2200px;
+            left: 1000px;
+            transform: rotate(80deg);
+        }
+        .img81 {
+            position: absolute;
+            top: 2490px;
+            left: 1000px;
+            transform: rotate(10deg);
+        }
+
+        .img82 {
+            position: absolute;
+            top: 2600px;
+            left: 0px;
+            transform: rotate(-5deg);
+        }
+
+        .img83 {
+            position: absolute;
+            top: 2500px;
+            left: 709px;
+            transform: rotate(2deg);
+        }
+
+        .img84 {
+            position: absolute;
+            top: 2500px;
+            left: 350px;
+            transform: rotate(-3deg);
+        }
+
+        .img85 {
+            position: absolute;
+            top: 2900px;
+            left: 350px;
+            transform: rotate(90deg);
+        }
+        .img86 {
+            position: absolute;
+            top: 2900px;
+            left: 750px;
+            transform: rotate(5deg);
+        }
+
+        .img87 {
+            position: absolute;
+            top: 2900px;
+            left: 1000px;
+            transform: rotate(86deg);
+        }
+
+        .img88 {
+            position: absolute;
+            top: 3300px;
+            left: 0px;
+            transform: rotate(-9deg);
+        }
+
+        .img89 {
+            position: absolute;
+            top: 3300px;
+            left: 350px;
+            transform: rotate(-25deg);
+        }
+        .img90 {
+            position: absolute;
+            top: 3180px;
+            left: 670px;
+            transform: rotate(0deg);
+        }
+
+        .img91 {
+            position: absolute;
+            top: 3180px;
+            left: 1000px;
+            transform: rotate(3deg);
+        }
+
+        .img92 {
+            position: absolute;
+            top: 3400px;
+            left: 670px;
+            transform: rotate(-2deg);
+        }
+
+        .img93 {
+            position: absolute;
+            top: 3750px;
+            left: 0px;
+            transform: rotate(-25deg);
+        }
+
+        .img94 {
+            position: absolute;
+            top: 3600px;
+            left: 300px;
+            transform: rotate(-5deg);
+        }
+
+        .img95 {
+            position: absolute;
+            top: 3760px;
+            left: 600px;
+            transform: rotate(5deg);
+        }
+
+        .img96 {
+            position: absolute;
+            top: 3850px;
+            left: 980px;
+            transform: rotate(2deg);
+        }
+
+        .img97 {
+            position: absolute;
+            top: 3900px;
+            left: 300px;
+            transform: rotate(-90deg);
+        }
+
+        .img98 {
+            position: absolute;
+            top: 4300px;
+            left: 600px;
+            transform: rotate(-5deg);
+        }
+
+        .img99 {
+            position: absolute;
+            top: 4100px;
+            left: 80px;
+            transform: rotate(76deg);
+        }
+        .img100 {
+            position: absolute;
+            top: 4400px;
+            left: 300px;
+            transform: rotate(9deg);
+        }
+
+    </style>
+</head>
+<body>
+<div class="box">
+    <img src="img/29.jpg" class="img1">
+    <img src="img/31.jpg" class="img2">
+    <img src="img/35.jpg" class="img3">
+    <img src="img/36.jpg" class="img4">
+    <img src="img/37.jpg" class="img37">
+    <img src="img/43.jpg" class="img5">
+    <img src="img/45.jpg" class="img6">
+    <img src="img/51.jpg" class="img51">
+    <img src="img/52.jpg" class="img52">
+    <img src="img/54.jpg" class="img54">
+    <img src="img/55.jpg" class="img55">
+    <img src="img/56.jpg" class="img56">
+    <img src="img/57.jpg" class="img57">
+    <img src="img/58.jpg" class="img58">
+    <img src="img/59.jpg" class="img59">
+    <img src="img/61.jpg" class="img61">
+    <img src="img/73.jpg" class="img73">
+    <img src="img/74.jpg" class="img74">
+    <img src="img/75.jpg" class="img75">
+    <img src="img/76.jpg" class="img76">
+    <img src="img/78.jpg" class="img78">
+    <img src="img/79.jpg" class="img79">
+    <img src="img/80.jpg" class="img80">
+    <img src="img/81.jpg" class="img81">
+    <img src="img/82.jpg" class="img82">
+    <img src="img/83.jpg" class="img83">
+    <img src="img/84.jpg" class="img84">
+    <img src="img/85.jpg" class="img85">
+    <img src="img/86.jpg" class="img86">
+    <img src="img/87.jpg" class="img87">
+    <img src="img/88.jpg" class="img88">
+    <img src="img/89.jpg" class="img89">
+    <img src="img/90.jpg" class="img90">
+    <img src="img/91.jpg" class="img91">
+    <img src="img/92.jpg" class="img92">
+    <img src="img/93.jpg" class="img93">
+    <img src="img/94.jpg" class="img94">
+    <img src="img/95.jpg" class="img95">
+    <img src="img/96.jpg" class="img96">
+    <img src="img/97.jpg" class="img97">
+    <img src="img/98.jpg" class="img98">
+    <img src="img/99.jpg" class="img99">
+    <img src="img/100.jpg" class="img100">
+
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--使用前端时记得加上这个 在html标签后加上 -->
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绝代double娇</title>
+    <link rel="stylesheet" href="resources/login.css">
+    <link rel="stylesheet" href="resources/button.css">
+    <script src="resources/jquery.js"></script>
+    <script src="resources/index.js"></script>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+        background: url(img/login.jpg) no-repeat;
+        background-size: cover;
+        perspective: 1000px;
+    }
+</style>
+
+<body>
+    <div class="loginBox">
+        <div class="container">
+            <div class="title">Double美丽个人主页</div>
+            <div class="information">
+                <input type="text" placeholder="账号" id="myname">
+                <label></label>
+            </div>
+            <div class="information">
+                <input type="name" placeholder="姓名">
+                <label>请输入正确的姓名</label>
+            </div>
+            <div class="information">
+                <input type="password" placeholder="密码" id="psd_input">
+                <label class="label_psd">长度在6~18之间，只能包含字母、数字和下划线</label>
+            </div>
+            <div class="information">
+                <input type="password" placeholder="再次输入密码">
+                <label>密码不一致</label>
+            </div>
+            <div class="information">
+                <input type="tel" placeholder="手机号">
+                <label>请输入正确的手机号</label>
+            </div>
+            <button class="btn" id="newBtn">注册</button>
+            <br>
+            <button class="loginBtn" id="before">已有账号，返回登录界面</button>
+            <span class="true err">注册成功，请登录</span>
+            <span class="err" id="tips">请完善个人信息</span>
+            <span class="err" id="ret">账号已存在，请更改账号后重试</span>
+            <span></span>
+        </div>
+        <div class="login">
+            <div class="title">绝代double娇</div>
+            <div class="information">
+                <input type="text" placeholder="账号" id="login_name">
+            </div>
+            <div class="information">
+                <input type="password" placeholder="密码" id="login_psd">
+            </div>
+            <button class="btn" id="login_btn">登录</button>
+            <br>
+            <button class="loginBtn" id="register" style="display:none;">新会员注册</button>
+            <span class="err" id="err">用户名不存在或密码错误</span>
+            <span class="err" id="ins">请输入用户名或密码</span>
+
+        </div>
+    </div>
+    <h1 id="results">
+    </h1>
+    <button class="tog" id="tog">切换账号</button>
+</body>
+
+</html>

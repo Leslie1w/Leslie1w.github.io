@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱心墙哟</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            font-family: "微软雅黑";
+            font-size: 14px;
+            color: #666;
+            padding: 0;
+            margin: 0;;
+        }
+        body,html{
+            background: black;
+            height: 100%;
+        }
+        /*css3实现照片墙的样式*/
+        .container {
+            width: 100%!important;
+            height: 100%;
+            position: relative;
+            margin: auto;
+            background-color: black;
+            overflow: hidden;
+        }
+
+        .container img {
+            position: absolute;
+            padding: 5px;
+            height: 300px;
+            width: 300px;
+            background: #fff;
+            border: 1px solid #ddd;
+            -webkit-transition: all 1s ease-in-out;
+            -moz-transition: all 1s ease-in-out;
+            transition: all 1s ease-in-out;
+            z-index: 1;
+            top:50%;
+            left:50%;
+            -webkit-transform-origin:50% 50%;
+            -moz-transform-origin:50% 50%;
+            transform-origin:50% 50%;
+            -webkit-transform: translate(-50%,-50%) ;
+            -moz-transform: translate(-50%,-50%) ;
+            transform: translate(-50%,-50%) ;
+        }
+        .start{
+            background-color: blue!important;
+            z-index: 4!important;
+            -webkit-transition: all 0.2s ease-in-out!important;
+            -moz-transition: all 0.2s ease-in-out!important;
+            transition: all 0.2s ease-in-out!important;
+        }
+        .surprise{
+            -webkit-transform-origin:50% 50%!important;
+            -moz-transform-origin:50% 50%!important;
+            transform-origin:50% 50%!important;
+            -webkit-transform: rotate(0deg) translate(-50%,-50%) !important;
+            -moz-transform: rotate(0deg) translate(-50%,-50%) !important;
+            transform: rotate(0deg) translate(-50%,-50%) !important;
+            /* -webkit-transform:!important;
+            -moz- rotate(360deg)transform:rotate(360deg)!important;
+            transform:rotate(360deg)!important;    */
+            top:50%!important;
+            left:50%!important;
+            height: 500px!important;
+            width: 500px!important;
+            z-index: 5!important;
+            background-color: red;
+        }
+        .picBase:hover{
+            box-shadow: 15px 15px 20px rgba(50,50,50,0.4);
+            transform:rotate(0deg) scale(2.20);
+            -webkit-transform:rotate(0deg) scale(2.20);
+            z-index: 1000;
+        }
+        body {
+            background-color: #F5F5DC;
+        }
+    </style>
+</head>
+<body style="background-image: url(web/bg1.png);">
+<div class="container" id="container"></div>
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    $(function () {
+        var count = 0;
+        var selectFlag = false;
+        var startFlag = false;
+        var roundBox;
+        $("#container").css("width", window.innerHeight * 4 / 3)
+        var appendPic = function (item) {
+            if (selectFlag) {
+                return
+            }
+            var x = Math.random() * 4,
+                y = Math.random() * 4
+            if (!heartFunc(x, y)) {
+                appendPic(item)
+            } else {
+                var back = "jpg";
+                var imgNum = 10;
+                if (item % imgNum == 1) {
+                    back = "gif"
+                }
+                if (item % imgNum == 2 || item % imgNum == 3 || item % imgNum == 4) {
+                    back = "png"
+                }
+                var html = '<img src="loveimg/'+ item + '.jpg'  + '" class="picBase" id="pic-' + item + '"  />'
+                $("#container").append(html)
+                setTimeout(function () {
+                    $("#pic-" + item).css("top", 45 + 25 * (2 - y) * 0.85 + "%").css("left", 50 + 25 * (2 - x) * 0.85 + "%")
+                        .css("transform", "rotate("+(25 * (0.5 - Math.random())) + "deg) translate(-50%,-50%)")
+                        .css("width", "100px").css("height", "100px")
+                }, 500);
+
+            }
+
+        }
+        var init = function () {
+            for (var i = 1; i < 100; i++) {
+                appendPic(i)
+                count++
+            }
+        }
+        var selectFunc = function () {
+            $(".surprise").removeClass("surprise").css("transform", "rotate("+(25 * (0.5 - Math.random())) + "deg) ")
+            $("#pic-" + Math.floor(Math.random() * count)).addClass("surprise")
+            $(".start").removeClass("start")
+        }
+        var comfirmFunc = function () {
+            startFunc();
+        }
+        var startFunc = function () {
+            $(".surprise").removeClass("surprise")
+            roundBox= window.setInterval(function(){
+
+                $(".start").removeClass("start")
+                for (var i = 1; i < count; i++) {
+                    if(i%20==Math.floor(Math.random() * 20)){
+                        $("#pic-" + i).addClass("start")
+                    }
+                }
+            },200)
+        }
+        var enterNum=0
+        $(document).keydown(function (e) {
+            selectFlag = true;
+            if (!e) var e = window.event;
+            if (e.keyCode == 32) { //选
+                if(enterNum%2==0){
+                    startFunc();
+                }else{
+                    startFlag=true
+                    window.clearInterval(roundBox)
+                    $(".start").removeClass("start")
+                    selectFunc();
+                }
+                enterNum++
+                // startFunc();
+            }
+            if (e.keyCode == 13) { //存
+                comfirmFunc();
+            }
+        });
+        var heartFunc = function (x, y) {
+            // console.log(x,y)
+            if (x >= 0 && x < 1) {
+                if (y < (x + 3) && y > (-x + 2)) {
+                    return true
+                }
+            } else if (x >= 1 && x < 2) {
+                if (y < (-x + 5) && y > (-x + 2)) {
+                    return true
+                }
+            } else if (x >= 2 && x < 3) {
+                if (y < (x + 1) && y > (x - 2)) {
+                    return true
+                }
+            } else if (x >= 3 && x < 4) {
+                if (y < (-x + 7) && y > (x - 2)) {
+                    return true
+                }
+            }
+            return false
+        }
+        init();
+    })
+</script>
+</body>
+</html>
